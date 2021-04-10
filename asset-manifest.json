@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/MARC_tracker_app/static/css/main.793e1c9a.chunk.css",
+    "main.js": "/MARC_tracker_app/static/js/main.e5a8c191.chunk.js",
+    "main.js.map": "/MARC_tracker_app/static/js/main.e5a8c191.chunk.js.map",
+    "runtime-main.js": "/MARC_tracker_app/static/js/runtime-main.fdf590b5.js",
+    "runtime-main.js.map": "/MARC_tracker_app/static/js/runtime-main.fdf590b5.js.map",
+    "static/js/2.539ff6c2.chunk.js": "/MARC_tracker_app/static/js/2.539ff6c2.chunk.js",
+    "static/js/2.539ff6c2.chunk.js.map": "/MARC_tracker_app/static/js/2.539ff6c2.chunk.js.map",
+    "static/js/3.28f516e1.chunk.js": "/MARC_tracker_app/static/js/3.28f516e1.chunk.js",
+    "static/js/3.28f516e1.chunk.js.map": "/MARC_tracker_app/static/js/3.28f516e1.chunk.js.map",
+    "index.html": "/MARC_tracker_app/index.html",
+    "static/css/main.793e1c9a.chunk.css.map": "/MARC_tracker_app/static/css/main.793e1c9a.chunk.css.map",
+    "static/js/2.539ff6c2.chunk.js.LICENSE.txt": "/MARC_tracker_app/static/js/2.539ff6c2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdf590b5.js",
+    "static/js/2.539ff6c2.chunk.js",
+    "static/css/main.793e1c9a.chunk.css",
+    "static/js/main.e5a8c191.chunk.js"
+  ]
+}
