@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 480px;
+}
+
+.post {
+  padding: 10px;
+  background-color: #eee;
+}
+
+.loading {
+  text-align: center;
+}
