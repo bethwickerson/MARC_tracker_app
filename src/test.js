@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
-import logo from './logo512.png' // relative path to image 
-
 
 // The REST API endpoint
 const API_URL = 'https://gis2.marc2.org/marcdataapi/api/covidvaccination';
+const trackerLogo = '/logo512.png';
 
 function App() {
   // At the beginning, posts is an empty array
@@ -38,27 +37,44 @@ function App() {
 
 
   // CREATE IMAGE
+  const canvas = useRef();
+  let ctx = null;
 
+  // initialize the canvas context
+  useEffect(() => {
+    // dynamically assign the width and height to canvas
+    const canvasEle = canvas.current;
+    canvasEle.width = canvasEle.clientWidth * 2;
+    canvasEle.height = canvasEle.clientHeight * 2.3;
+
+    // get context of the canvas
+    ctx = canvasEle.getContext("2d");
+  }, []);
+
+  useEffect(() => {
+    drawRect();
+  }, []);
+
+  // draw rectangle
+  const drawRect = () => {
+    ctx.font = "90px Arial Black";
+    ctx.fillStyle = "red";
+    ctx.fillText(maxMO + maxKS, 200, 850);
+    ctx.drawImage(trackerLogo, 10, 10, 150, 180);
+  }
 
   return (
     <div className="wrapper">
       {posts.length > 0 ? (
         <div className="content">
-          <svg>
-            <g transform="translate(25, 25)">
-              <image href={logo} height="350" width="350" />
-            </g>
-            <text x="130" y="450" font-size="2.25rem">
-              <tspan font-weight="bold" fill="red">{maxMO + maxKS}</tspan>
-            </text>
-          </svg>
+          <canvas ref={canvas}></canvas>
         </div>
       ) : (
         <p className="loading">Loading... </p>
       )
       }
 
-    </div >
+    </div>
   );
 }
 
