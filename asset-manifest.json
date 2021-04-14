@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/MARC_tracker_app/static/css/main.3d6871d2.chunk.css",
-    "main.js": "/MARC_tracker_app/static/js/main.9755c86e.chunk.js",
-    "main.js.map": "/MARC_tracker_app/static/js/main.9755c86e.chunk.js.map",
-    "runtime-main.js": "/MARC_tracker_app/static/js/runtime-main.fdf590b5.js",
-    "runtime-main.js.map": "/MARC_tracker_app/static/js/runtime-main.fdf590b5.js.map",
-    "static/js/2.32c2036c.chunk.js": "/MARC_tracker_app/static/js/2.32c2036c.chunk.js",
-    "static/js/2.32c2036c.chunk.js.map": "/MARC_tracker_app/static/js/2.32c2036c.chunk.js.map",
-    "static/js/3.28f516e1.chunk.js": "/MARC_tracker_app/static/js/3.28f516e1.chunk.js",
-    "static/js/3.28f516e1.chunk.js.map": "/MARC_tracker_app/static/js/3.28f516e1.chunk.js.map",
+    "main.css": "/MARC_tracker_app/static/css/main.58644a50.chunk.css",
+    "main.js": "/MARC_tracker_app/static/js/main.fe2cc319.chunk.js",
+    "main.js.map": "/MARC_tracker_app/static/js/main.fe2cc319.chunk.js.map",
+    "runtime-main.js": "/MARC_tracker_app/static/js/runtime-main.c7160982.js",
+    "runtime-main.js.map": "/MARC_tracker_app/static/js/runtime-main.c7160982.js.map",
+    "static/js/2.b1e283ef.chunk.js": "/MARC_tracker_app/static/js/2.b1e283ef.chunk.js",
+    "static/js/2.b1e283ef.chunk.js.map": "/MARC_tracker_app/static/js/2.b1e283ef.chunk.js.map",
+    "static/js/3.04826969.chunk.js": "/MARC_tracker_app/static/js/3.04826969.chunk.js",
+    "static/js/3.04826969.chunk.js.map": "/MARC_tracker_app/static/js/3.04826969.chunk.js.map",
     "index.html": "/MARC_tracker_app/index.html",
-    "static/css/main.3d6871d2.chunk.css.map": "/MARC_tracker_app/static/css/main.3d6871d2.chunk.css.map",
-    "static/js/2.32c2036c.chunk.js.LICENSE.txt": "/MARC_tracker_app/static/js/2.32c2036c.chunk.js.LICENSE.txt",
+    "static/css/main.58644a50.chunk.css.map": "/MARC_tracker_app/static/css/main.58644a50.chunk.css.map",
+    "static/js/2.b1e283ef.chunk.js.LICENSE.txt": "/MARC_tracker_app/static/js/2.b1e283ef.chunk.js.LICENSE.txt",
     "static/media/logo512.d7d3185e.png": "/MARC_tracker_app/static/media/logo512.d7d3185e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.fdf590b5.js",
-    "static/js/2.32c2036c.chunk.js",
-    "static/css/main.3d6871d2.chunk.css",
-    "static/js/main.9755c86e.chunk.js"
+    "static/js/runtime-main.c7160982.js",
+    "static/js/2.b1e283ef.chunk.js",
+    "static/css/main.58644a50.chunk.css",
+    "static/js/main.fe2cc319.chunk.js"
   ]
 }
