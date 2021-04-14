@@ -5,7 +5,7 @@ import logo from './logo512.png' // relative path to image
 
 
 // The REST API endpoint
-const API_URL = 'https://gis2.marc2.org/marcdataapi/api/covidvaccination';
+const API_URL = './TotalVaccinatedData.json';
 
 function App() {
   // At the beginning, posts is an empty array
@@ -22,23 +22,8 @@ function App() {
     fetchData();
   }, []);
 
-  const Missouri = posts
-    .filter(post => post.Jurisdiction === 'Missouri')
-    .sort((a, b) => a.Date - b.Date)
-    //.slice(-1)
+  const TotalVaccinatedData = posts
     .map((post) => post.RegimenCompleted_Count);
-
-  const Kansas = posts
-    .filter(post => post.Jurisdiction === 'Kansas')
-    .sort((a, b) => a.Date - b.Date)
-    .map((post) => post.RegimenCompleted_Count);
-
-  const maxMO = Math.max(...Missouri)
-  const maxKS = Math.max(...Kansas)
-
-
-  // CREATE IMAGE
-
 
   return (
     <div className="wrapper">
@@ -49,7 +34,7 @@ function App() {
               <image href={logo} height="350" width="350" />
             </g>
             <text x="130" y="450" font-size="2.25rem">
-              <tspan font-weight="bold" fill="red">{maxMO + maxKS}</tspan>
+              <tspan font-weight="bold" fill="red">{TotalVaccinatedData}</tspan>
             </text>
           </svg>
         </div>
