@@ -18,3 +18,5 @@ First push to repo
 ```sh
 npm run deploy
 ```
+
+View at https://bethwickerson.github.io/MARC_tracker_app/

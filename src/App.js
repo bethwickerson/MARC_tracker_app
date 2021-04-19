@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './App.css';
-import logo from './logo512.png' // relative path to image 
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import './App.css'
+import LogoTracker from './LogoTracker'
+
+const saveSvgAsPng = require('save-svg-as-png')
+
+const imageOptions = {
+  scale: 10,
+  encoderOptions: 1,
+  backgroundColor: 'white',
+}
 
 
 // The REST API endpoint
 const API_URL = './TotalVaccinatedData.json';
 
 function App() {
+
+  const handleClick = () => {
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions);
+  };
   // At the beginning, posts is an empty array
   const [posts, setPosts] = useState([]);
 
@@ -29,14 +41,14 @@ function App() {
     <div className="wrapper">
       {posts.length > 0 ? (
         <div className="content">
-          <svg>
-            <g transform="translate(25, 25)">
-              <image href={logo} height="350" width="350" />
-            </g>
-            <text x="130" y="450" font-size="2.25rem">
-              <tspan font-weight="bold" fill="red">{TotalVaccinatedData}</tspan>
-            </text>
-          </svg>
+          <div>
+            <button onClick={handleClick}>Download Image</button>
+          </div>
+          <div>
+            <LogoTracker
+              count={TotalVaccinatedData.toLocaleString('ar-US')}
+            />
+          </div>
         </div>
       ) : (
         <p className="loading">Loading... </p>

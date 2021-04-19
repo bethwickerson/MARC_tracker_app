@@ -6,7 +6,14 @@
 }
 
 .content {
+  width: 100%;
   max-width: 480px;
+  position: relative;
+}
+
+.content div {
+  display: flex;
+  justify-content: center;
 }
 
 .loading {
@@ -14,11 +21,16 @@
 }
 
 svg {
-  width: 400px;
-  height: 500px;
   background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-smooth: never;
   -webkit-font-smoothing: none;
+}
+
+svg#logoTMA {
+  position: absolute;
+  width: 100%;
+  top: 30px;
+}
+
+.tracker1 {
+  width: 50%;
 }
