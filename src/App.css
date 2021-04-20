@@ -22,9 +22,6 @@
   position: relative;
 }
 
-.loading {
-  text-align: center;
-}
 svg {
   width: 500px;
   height: 500px;
@@ -33,9 +30,9 @@ svg {
 }
 
 svg#logoTMA {
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 30px;
+  top: 50px;
 }
 
 text.text-count {
@@ -68,6 +65,7 @@ button {
 button:hover,
 button:focus {
   background: #0a4f97;
+  color: #ffffff;
 }
 
 button:focus {

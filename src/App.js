@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   function formatNumber(num) {
-    return num.toLocaleString('ar-US')
+    return num.toLocaleString('en-US')
   }
 
   return (
