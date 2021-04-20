@@ -26,7 +26,6 @@ function App() {
   // Define the function that fetches the data from API
   const fetchData = async () => {
     const { data } = await axios.get(API_URL);
-    console.log(data);
     setPosts(data);
   };
   // Trigger the fetchData after the initial render by using the useEffect hook
@@ -34,28 +33,27 @@ function App() {
     fetchData();
   }, []);
 
-  const TotalVaccinatedData = posts
-    .map((post) => post.RegimenCompleted_Count);
+  function formatNumber(num) {
+    return num.toLocaleString('ar-US')
+  }
 
   return (
-    <div className="wrapper">
-      {posts.length > 0 ? (
-        <div className="content">
-          <div>
-            <button onClick={handleClick}>Download Image</button>
-          </div>
-          <div>
-            <LogoTracker
-              count={TotalVaccinatedData.toLocaleString('ar-US')}
-            />
-          </div>
+    <>
+      <div className="header">
+        <div className="button-container">
+          <button onClick={handleClick}>Download  PNG</button>
+          <button>Embed Code</button>
         </div>
-      ) : (
-        <p className="loading">Loading... </p>
-      )
-      }
-
-    </div >
+      </div>
+      <div className="content">
+        {posts.map(post => (
+          <LogoTracker
+            count={formatNumber(post.RegimenCompleted_Count)}
+            date={post.Date}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
