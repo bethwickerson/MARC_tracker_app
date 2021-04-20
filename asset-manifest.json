@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MARC_tracker_app/static/css/main.b7265612.chunk.css",
-    "main.js": "/MARC_tracker_app/static/js/main.2814a2a1.chunk.js",
-    "main.js.map": "/MARC_tracker_app/static/js/main.2814a2a1.chunk.js.map",
+    "main.js": "/MARC_tracker_app/static/js/main.4cc21de2.chunk.js",
+    "main.js.map": "/MARC_tracker_app/static/js/main.4cc21de2.chunk.js.map",
     "runtime-main.js": "/MARC_tracker_app/static/js/runtime-main.ca3a0eb6.js",
     "runtime-main.js.map": "/MARC_tracker_app/static/js/runtime-main.ca3a0eb6.js.map",
     "static/js/2.cc68e794.chunk.js": "/MARC_tracker_app/static/js/2.cc68e794.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ca3a0eb6.js",
     "static/js/2.cc68e794.chunk.js",
     "static/css/main.b7265612.chunk.css",
-    "static/js/main.2814a2a1.chunk.js"
+    "static/js/main.4cc21de2.chunk.js"
   ]
 }
