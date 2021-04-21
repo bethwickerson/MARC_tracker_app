@@ -53,6 +53,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   width: 40vw;
+  height: 60vh;
   padding: 1rem;
   overflow: auto;
 }
