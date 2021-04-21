@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/MARC_tracker_app/static/css/main.d7d9605c.chunk.css",
-    "main.js": "/MARC_tracker_app/static/js/main.6fbbaf93.chunk.js",
-    "main.js.map": "/MARC_tracker_app/static/js/main.6fbbaf93.chunk.js.map",
+    "main.css": "/MARC_tracker_app/static/css/main.c8fd04b9.chunk.css",
+    "main.js": "/MARC_tracker_app/static/js/main.c82809d3.chunk.js",
+    "main.js.map": "/MARC_tracker_app/static/js/main.c82809d3.chunk.js.map",
     "runtime-main.js": "/MARC_tracker_app/static/js/runtime-main.ca3a0eb6.js",
     "runtime-main.js.map": "/MARC_tracker_app/static/js/runtime-main.ca3a0eb6.js.map",
-    "static/js/2.cc68e794.chunk.js": "/MARC_tracker_app/static/js/2.cc68e794.chunk.js",
-    "static/js/2.cc68e794.chunk.js.map": "/MARC_tracker_app/static/js/2.cc68e794.chunk.js.map",
+    "static/js/2.8358c8f9.chunk.js": "/MARC_tracker_app/static/js/2.8358c8f9.chunk.js",
+    "static/js/2.8358c8f9.chunk.js.map": "/MARC_tracker_app/static/js/2.8358c8f9.chunk.js.map",
     "static/js/3.8ce12b58.chunk.js": "/MARC_tracker_app/static/js/3.8ce12b58.chunk.js",
     "static/js/3.8ce12b58.chunk.js.map": "/MARC_tracker_app/static/js/3.8ce12b58.chunk.js.map",
     "index.html": "/MARC_tracker_app/index.html",
-    "static/css/main.d7d9605c.chunk.css.map": "/MARC_tracker_app/static/css/main.d7d9605c.chunk.css.map",
-    "static/js/2.cc68e794.chunk.js.LICENSE.txt": "/MARC_tracker_app/static/js/2.cc68e794.chunk.js.LICENSE.txt"
+    "static/css/main.c8fd04b9.chunk.css.map": "/MARC_tracker_app/static/css/main.c8fd04b9.chunk.css.map",
+    "static/js/2.8358c8f9.chunk.js.LICENSE.txt": "/MARC_tracker_app/static/js/2.8358c8f9.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/MARC_tracker_app/static/media/file_download.b8e5c5d6.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ca3a0eb6.js",
-    "static/js/2.cc68e794.chunk.js",
-    "static/css/main.d7d9605c.chunk.css",
-    "static/js/main.6fbbaf93.chunk.js"
+    "static/js/2.8358c8f9.chunk.js",
+    "static/css/main.c8fd04b9.chunk.css",
+    "static/js/main.c82809d3.chunk.js"
   ]
 }
