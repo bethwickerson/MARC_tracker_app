@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const LogoTracker = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" id="logoTMA" viewBox="0 0 310 340">
     <path d="M147.07,0A129.51,129.51,0,1,0,276.73,129.52h0A129.58,129.58,0,0,0,147.1,0Zm0,234.51a105,105,0,1,1,105.13-105h0a105.07,105.07,0,0,1-105.13,105h0Z" fill="#0a4f97" />
@@ -7,7 +8,7 @@ const LogoTracker = (props) => (
       <circle className="track-percentage" r="65" cx="147" cy="130" fill="transparent"
         stroke="#e24433"
         stroke-width="130"
-        stroke-dasharray={`calc(${props.percentage} * 408.2 / 100) 408.2`} />
+        stroke-dasharray={`${props.percentage} 408.2`} />
 
       <circle r="105" cx="147" cy="130" fill="white" />
     </g>

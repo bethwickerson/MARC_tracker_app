@@ -71,6 +71,7 @@ function App() {
   }
 
 
+
   return (
     <>
       <div className="header">
@@ -82,7 +83,7 @@ function App() {
       <div className="content">
         {posts.map(post => (
           <LogoTracker
-            percentage={(post.RegimenCompleted_Count / 2000000) * 100}
+            percentage={((post.RegimenCompleted_Count * 408.2 / 100) / 2000000) * 100}
             count={formatNumber(post.RegimenCompleted_Count)}
             date={post.Date}
           />
