@@ -5,11 +5,6 @@ import LogoTracker from './LogoTracker'
 
 const saveSvgAsPng = require('save-svg-as-png')
 
-const imageOptions = {
-  scale: 10,
-  encoderOptions: 1,
-  backgroundColor: 'white',
-}
 
 
 // The REST API endpoint
@@ -17,16 +12,12 @@ const API_URL = './TotalVaccinatedData.json';
 
 function App() {
 
-  const handleClick = () => {
-    saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions);
-  };
   // At the beginning, posts is an empty array
   const [posts, setPosts] = useState([]);
 
   // Define the function that fetches the data from API
   const fetchData = async () => {
     const { data } = await axios.get(API_URL);
-    console.log(data);
     setPosts(data);
   };
   // Trigger the fetchData after the initial render by using the useEffect hook
@@ -34,28 +25,89 @@ function App() {
     fetchData();
   }, []);
 
-  const TotalVaccinatedData = posts
-    .map((post) => post.RegimenCompleted_Count);
+  function formatNumber(num) {
+    return num.toLocaleString('en-US')
+  }
+
+  // download options
+  const [dropMenu, showDropMenu] = useState(false);
+  const downloadOption = () => {
+    showDropMenu(!dropMenu);
+    if (embedCode === true) {
+      showEmbedCode(false);
+    }
+  }
+
+  const imageOptions_High = {
+    scale: 25,
+    encoderOptions: 1,
+    backgroundColor: 'white',
+  }
+  const downloadPNG_High = () => {
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_High);
+  }
+  const imageOptions_Med = {
+    scale: 15,
+    encoderOptions: 1,
+    backgroundColor: 'white',
+  }
+  const downloadPNG_Med = () => {
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_Med);
+  }
+  const imageOptions_Low = {
+    scale: 5,
+    encoderOptions: 1,
+    backgroundColor: 'white',
+  }
+  const downloadPNG_Low = () => {
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_Low);
+  }
+  const [embedCode, showEmbedCode] = useState(false);
+  const embedOption = () => {
+    showEmbedCode(!embedCode);
+    if (dropMenu === true) {
+      showDropMenu(false);
+    }
+  }
+
+
 
   return (
-    <div className="wrapper">
-      {posts.length > 0 ? (
-        <div className="content">
-          <div>
-            <button onClick={handleClick}>Download Image</button>
-          </div>
-          <div>
-            <LogoTracker
-              count={TotalVaccinatedData.toLocaleString('ar-US')}
-            />
-          </div>
+    <>
+      <div className="header">
+        <div className="button-container">
+          <button className={`download-open ${dropMenu === true ? "show" : "hide"}`} onClick={downloadOption}>Download PNG</button>
+          <button className={`embed-open ${embedCode === true ? "show" : "hide"}`} onClick={embedOption}>Embed Code</button>
         </div>
-      ) : (
-        <p className="loading">Loading... </p>
-      )
-      }
-
-    </div >
+      </div>
+      <div className="content">
+        {posts.map(post => (
+          <LogoTracker
+            percentage={((post.RegimenCompleted_Count * 408.2 / 100) / 2000000) * 100}
+            count={formatNumber(post.RegimenCompleted_Count)}
+            date={post.Date}
+          />
+        ))}
+      </div>
+      <div className={`download-option ${dropMenu === true ? "show" : "hide"}`}>
+        <button onClick={downloadPNG_Low}>Low Resolution (3500x3500, 658KB)</button>
+        <button onClick={downloadPNG_Med}>Medium Resolution (9300x9300, 3.2MB)</button>
+        <button onClick={downloadPNG_High}>High Resolution (15500x17000, 7.1MB)</button>
+      </div>
+      <div className={`embed-code ${embedCode === true ? "show" : "hide"}`}>
+        <div className="center-code">
+          <h4>copy/paste the following code into your web page:</h4>
+          <hr />
+          <code>
+            &lt;div style=&quot;position: relative; overflow:hidden; width: 100%; height:100%&quot;&gt;
+            &lt;iframe src=&quot;http://marc-kc.github.io/MARC_tracker_app/&quot;
+            style=&quot;position:relative;transform:translate(0,-60px); overflow: hidden;&quot; scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot;
+            title=&quot;Two Million Arms KC&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+          </code>
+          <hr />
+        </div>
+      </div>
+    </>
   );
 }
 

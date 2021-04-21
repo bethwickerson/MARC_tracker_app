@@ -1,36 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap");
+
 .wrapper {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.content {
+.header {
   width: 100%;
-  max-width: 480px;
+  position: relative;
+  background-color: #eee;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.download-option {
+  display: flex;
+  background-color: #ccc;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.embed-code,
+.download-option {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 57px);
+  background-color: #ccc;
+  z-index: 999;
+}
+
+.embed-code.hide,
+.download-option.hide {
+  display: none;
+}
+
+.embed-code.show,
+.download-option.show {
+  display: flex;
+}
+
+.embed-code .center-code {
+  position: relative;
+  top: 10vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40vw;
+  height: 60vh;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* SVG */
+.content {
   position: relative;
 }
 
-.content div {
-  display: flex;
-  justify-content: center;
-}
-
-.loading {
-  text-align: center;
-}
-
 svg {
-  background-color: #ffffff;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
   -webkit-font-smoothing: none;
 }
 
 svg#logoTMA {
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 30px;
+  top: 80px;
 }
 
-.tracker1 {
-  width: 50%;
+circle.track-percentage {
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translate(-277px, 17px);
 }
+
+text.text-count {
+  font-family: "Heebo", "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+text.text-date {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* buttons */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  border: 1px solid #fff;
+  border-width: 0 1px;
+  border-radius: 0;
+  padding: 1rem 2rem;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  background: #eaeaea;
+  color: #333333;
+  font-weight: 900;
+  font-family: "Heebo", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* menu bar */
+.button-container button.show {
+  background-color: #ccc;
+}
+
+.button-container button:after {
+  content: "";
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  width: 28px;
+  height: 24px;
+}
+.button-container button.show:after {
+  background-image: url(./assets/close.svg);
+  background-size: 20px;
+}
+.button-container button.hide:after {
+  background-image: url(./assets/expand_more.svg);
+}
+
+/* expand screen */
+.download-option button {
+  justify-content: flex-start;
+  background-color: #ccc;
+  color: #333;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #bbb;
+  font-size: 1rem;
+  font-weight: 400;
+  flex: 0;
+  text-align: left;
+  padding: 9vh 7vw;
+}
+
+.download-option button:before {
+  content: "";
+  background-image: url(./assets/file_download.svg);
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  width: 34px;
+  height: 24px;
+}
+.download-option button:hover {
+  background-color: #bbb;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #aaa;
+}
+/* Button styles end */
