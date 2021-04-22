@@ -31,6 +31,7 @@ function App() {
 
   // download options
   const [dropMenu, showDropMenu] = useState(false);
+  const [loading, showLoading] = useState(false)
   const downloadOption = () => {
     showDropMenu(!dropMenu);
     if (embedCode === true) {
@@ -44,6 +45,7 @@ function App() {
     backgroundColor: 'white',
   }
   const downloadPNG_High = () => {
+    showLoading(true);
     saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_High);
   }
   const imageOptions_Med = {
@@ -52,6 +54,7 @@ function App() {
     backgroundColor: 'white',
   }
   const downloadPNG_Med = () => {
+    showLoading(true);
     saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_Med);
   }
   const imageOptions_Low = {
@@ -60,6 +63,7 @@ function App() {
     backgroundColor: 'white',
   }
   const downloadPNG_Low = () => {
+    showLoading(true);
     saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_Low);
   }
   const [embedCode, showEmbedCode] = useState(false);
@@ -83,6 +87,7 @@ function App() {
       <div className="content">
         {posts.map(post => (
           <LogoTracker
+            degree={(post.RegimenCompleted_Count / 2000000) * 360}
             percentage={((post.RegimenCompleted_Count * 408.2 / 100) / 2000000) * 100}
             count={formatNumber(post.RegimenCompleted_Count)}
             date={post.Date}
@@ -90,8 +95,8 @@ function App() {
         ))}
       </div>
       <div className={`download-option ${dropMenu === true ? "show" : "hide"}`}>
-        <button onClick={downloadPNG_Low}>Low Resolution (3500x3500, 658KB)</button>
-        <button onClick={downloadPNG_Med}>Medium Resolution (9300x9300, 3.2MB)</button>
+        <button onClick={downloadPNG_Low}>Low Resolution (3100x3400, 658KB)</button>
+        <button onClick={downloadPNG_Med}>Medium Resolution (9300x10200, 3.2MB)</button>
         <button onClick={downloadPNG_High}>High Resolution (15500x17000, 7.1MB)</button>
       </div>
       <div className={`embed-code ${embedCode === true ? "show" : "hide"}`}>
@@ -107,6 +112,7 @@ function App() {
           <hr />
         </div>
       </div>
+      <div className={`loading ${loading === true ? "show" : "hide"}`}><h1>loading...</h1></div>
     </>
   );
 }
