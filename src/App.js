@@ -40,7 +40,7 @@ function App() {
   }
 
   const imageOptions_High = {
-    scale: 25,
+    scale: 20,
     encoderOptions: 1,
     backgroundColor: 'white',
   }
@@ -49,7 +49,7 @@ function App() {
     saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_High);
   }
   const imageOptions_Med = {
-    scale: 15,
+    scale: 10,
     encoderOptions: 1,
     backgroundColor: 'white',
   }
@@ -58,7 +58,7 @@ function App() {
     saveSvgAsPng.saveSvgAsPng(document.getElementById('logoTMA'), 'TwoMillionArmsKC.png', imageOptions_Med);
   }
   const imageOptions_Low = {
-    scale: 5,
+    scale: 3,
     encoderOptions: 1,
     backgroundColor: 'white',
   }
@@ -88,25 +88,25 @@ function App() {
         {posts.map(post => (
           <LogoTracker
             degree={(post.RegimenCompleted_Count / 2000000) * 360}
-            percentage={((post.RegimenCompleted_Count * 408.2 / 100) / 2000000) * 100}
+            percentage={((post.RegimenCompleted_Count * 408.4 / 100) / 2000000) * 100}
             count={formatNumber(post.RegimenCompleted_Count)}
             date={post.Date}
           />
         ))}
       </div>
       <div className={`download-option ${dropMenu === true ? "show" : "hide"}`}>
-        <button onClick={downloadPNG_Low}>Low Resolution (3100x3400, 658KB)</button>
-        <button onClick={downloadPNG_Med}>Medium Resolution (9300x10200, 3.2MB)</button>
-        <button onClick={downloadPNG_High}>High Resolution (15500x17000, 7.1MB)</button>
+        <button onClick={downloadPNG_Low}>Low Resolution (2040x2040, 343KB)</button>
+        <button onClick={downloadPNG_Med}>Medium Resolution (6800x6800, 1.9MB)</button>
+        <button onClick={downloadPNG_High}>High Resolution (13600x13600, 5.6MB)</button>
       </div>
       <div className={`embed-code ${embedCode === true ? "show" : "hide"}`}>
         <div className="center-code">
-          <h4>copy/paste the following code into your web page:</h4>
+          <h4>copy/paste the following html code into your web page:</h4>
           <hr />
           <code>
-            &lt;div style=&quot;position: relative; overflow:hidden; width: 100%; height:100%&quot;&gt;
+            &lt;div style=&quot;position: relative; overflow:hidden; width: 100%; height:100%; padding-top: calc(100% + 60px);&quot;&gt;
             &lt;iframe src=&quot;http://marc-kc.github.io/MARC_tracker_app/&quot;
-            style=&quot;position:relative;transform:translate(0,-60px); overflow: hidden;&quot; scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot;
+            style=&quot;position:absolute; transform:translate(0,-60px); overflow: hidden; top: 0; left: 0; bottom: 0; right: 0;&quot; scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot;
             title=&quot;Two Million Arms KC&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
           </code>
           <hr />
