@@ -88,7 +88,7 @@ function App() {
         {posts.map(post => (
           <LogoTracker
             degree={(post.RegimenCompleted_Count / 2000000) * 360}
-            percentage={((post.RegimenCompleted_Count * 408.4 / 100) / 2000000) * 100}
+            percentage={((post.RegimenCompleted_Count * 408.45 / 100) / 2000000) * 100}
             count={formatNumber(post.RegimenCompleted_Count)}
             date={post.Date}
           />

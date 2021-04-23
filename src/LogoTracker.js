@@ -9,7 +9,7 @@ const LogoTracker = (props) => (
         <circle className="track-percentage" r="65" cx="147" cy="130" fill="transparent"
           stroke="#e24433"
           stroke-width="130"
-          stroke-dasharray={`${props.percentage} 408.4`} />
+          stroke-dasharray={`${props.percentage} 408.45`} />
 
         <circle r="105" cx="147" cy="130" fill="white" />
       </g>
@@ -19,7 +19,7 @@ const LogoTracker = (props) => (
       </g>
       <g transform={`rotate(${props.degree}, 147, 129)`}>
         <rect x="15.5" y="-1" fill="#FFFFFF" fill-opacity="0" width="260" height="259.6" />
-        <polygon fill="#ffffff" points="147,23 159,11.5 147,0" />
+        <polygon fill="#ffffff" points="147.5,23 160,11.5 147.5,0" />
       </g>
     </g>
     <text transform="translate(0 298)" className="text-count" font-size="32" fill="#e24433" font-family="'Heebo', Arial, Helvetica, sans-serif" x="48%" text-anchor="middle">{props.count}</text>
