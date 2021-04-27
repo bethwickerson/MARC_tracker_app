@@ -59,20 +59,23 @@
 
 /* SVG */
 .content {
-  position: relative;
-}
-
-svg {
-  width: 500px;
-  height: 500px;
-  background-color: #fff;
-  -webkit-font-smoothing: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 96px);
 }
 
 svg#logoTMA {
   position: relative;
-  width: 100%;
-  top: 80px;
+  /* width: 500px;
+  height: 500px;
+  hide the svg ...*/
+  width: 0;
+  height: 0;
+  background-color: #fff;
+  -webkit-font-smoothing: none;
 }
 
 circle.track-percentage {
@@ -83,9 +86,22 @@ circle.track-percentage {
 text.text-count {
   font-family: "Heebo", "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
+  letter-spacing: -0.03rem;
 }
 text.text-date {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*PNG */
+.logoPNG {
+  width: 100%;
+  max-width: 500px;
+}
+.logoPNG.loading {
+  display: none;
+}
+.logoPNG.load {
+  display: block;
 }
 
 /* buttons */

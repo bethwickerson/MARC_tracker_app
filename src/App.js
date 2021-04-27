@@ -4,6 +4,7 @@ import './App.css'
 import LogoTracker from './LogoTracker'
 
 const saveSvgAsPng = require('save-svg-as-png')
+const svgAsPngUri = require('save-svg-as-png')
 
 
 
@@ -14,12 +15,23 @@ function App() {
 
   // At the beginning, posts is an empty array
   const [posts, setPosts] = useState([]);
+  const [pngData, setPngData] = useState("loading");
 
   // Define the function that fetches the data from API
   const fetchData = async () => {
     const { data } = await axios.get(API_URL);
     setPosts(data);
+
+    const imageOptions = {
+      scale: 3,
+      encoderOptions: 1,
+      backgroundColor: 'white',
+    }
+    svgAsPngUri.svgAsPngUri(document.getElementById("logoTMA"), imageOptions).then(uri =>
+      setPngData(uri)
+    );
   };
+
   // Trigger the fetchData after the initial render by using the useEffect hook
   useEffect(() => {
     fetchData();
@@ -93,6 +105,7 @@ function App() {
             date={post.Date}
           />
         ))}
+        <img class={`logoPNG ${pngData === "loading" ? "loading" : "load"}`} src={pngData} alt="tracker png" />
       </div>
       <div className={`download-option ${dropMenu === true ? "show" : "hide"}`}>
         <button onClick={downloadPNG_Low}>Low Resolution (2040x2040, 343KB)</button>

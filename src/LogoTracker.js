@@ -3,7 +3,7 @@ import React from "react";
 
 const LogoTracker = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" id="logoTMA" viewBox="0 0 340 340">
-    <g transform="translate(20 0)">
+    <g transform="translate(20 20)">
       <path d="M147.07,0A129.51,129.51,0,1,0,276.73,129.52h0A129.58,129.58,0,0,0,147.1,0Zm0,234.51a105,105,0,1,1,105.13-105h0a105.07,105.07,0,0,1-105.13,105h0Z" fill="#0a4f97" />
       <g>
         <circle className="track-percentage" r="65" cx="147" cy="130" fill="transparent"
@@ -19,17 +19,17 @@ const LogoTracker = (props) => (
       </g>
       <g transform={`rotate(${props.degree}, 147, 129)`}>
         <rect x="15.5" y="-1" fill="#FFFFFF" fill-opacity="0" width="260" height="259.6" />
-        <polygon fill="#ffffff" points="147.5,23 160,11.5 147.5,0" />
+        <polygon fill="#ffffff" points="147.5,25 162,12, 147.5,-1" />
       </g>
     </g>
-    <text transform="translate(0 298)" className="text-count" font-size="32" fill="#e24433" font-family="'Heebo', Arial, Helvetica, sans-serif" x="48%" text-anchor="middle">{props.count}</text>
-    <text transform="translate(0 278)" className="text-date" font-size="7" fill="#333333" font-family="Arial, Helvetica, sans-serif" x="0">
+    <text transform="translate(0 318)" className="text-count" font-size="30" fill="#e24433" font-family="'Heebo', Arial, Helvetica, sans-serif" x="48%" text-anchor="middle">{props.count}</text>
+    <text transform="translate(8 298)" className="text-date" font-size="7" fill="#333333" font-family="Arial, Helvetica, sans-serif" x="0">
       <tspan x="5">Vaccinations</tspan>
       <tspan x="5" y="8">completed</tspan>
       <tspan x="5" y="16">in the KC region</tspan>
       <tspan x="5" y="24">as of {props.date}</tspan>
     </text>
-    <g transform="translate(22 0)">
+    <g transform="translate(22 20)">
       <path d="M230.4,288.75h1v4.78h-1Zm2.7,0h1.11l-1.49,2-.67.17v0l.93.24,1.38,1.45v.85h-1V293l-1.89-2Z" fill="#e24433" /><path d="M236.32,292.82v-3.36l-.2-.71h3.23v.71h-2l-.34-.18h0l.3.5v.56l-.3.51h0l.35-.18h1.71v.71h-1.72l-.34-.18h0l.3.5v.75l-.3.51h0l.35-.18h2.06v.71h-3.32Z" fill="#e24433" /><path d="M242.42,291.41l.26-.1v0l-.34-.09-1.25-1.8v-.64h1v.37l.7,1.06.11.81h0l.09-.64.74-1.13v-.47h.91v.64l-1.19,1.82-.32.07v0l.26.12v2.1h-1Z" fill="#e24433" /><path d="M249.17,290.5h3.39v.59h-3.39Zm0,1.38h3.39v.59h-3.39Z" fill="#e24433" /><rect x="259.57" y="279.35" width="43.54" height="21.13" fill="#e24433" /><path d="M265,291h1.12l.31.17h0l-.27-.47v-2.41l.27-.5h0l-.34.37-1,.33v-.71l1.43-.46H267v3.39l-.27.47h0l.32-.17h1v.64H265Z" fill="#fff" /><path d="M270,287.78l.51-.5h2.12l.51.5v3.34l-.51.5h-2.12l-.51-.5Zm.63,3.36.32-.16h1.24l.31.16h0l-.27-.46v-2.44l.27-.46h0l-.31.16h-1.24l-.32-.16h0l.27.46v2.44l-.27.46Z" fill="#fff" /><path d="M275.06,287.78l.51-.5h2.12l.51.5v3.34l-.51.5h-2.12l-.51-.5Zm.63,3.36L276,291h1.24l.32.16h0l-.27-.46v-2.44l.27-.46h0l-.32.16H276l-.32-.16h0l.27.46v2.44l-.27.46Z" fill="#fff" /><path d="M280.09,290.75h1v1l-.76,1-.48-.33.46-.81Z" fill="#fff" /><path d="M283.05,287.78l.51-.5h2.12l.51.5v3.34l-.51.5h-2.12l-.51-.5Zm.64,3.36L284,291h1.24l.32.16h0l-.27-.46v-2.44l.27-.46h0l-.32.16H284l-.31-.16h0l.27.46v2.44l-.27.46Z" fill="#fff" /><path d="M288.15,287.78l.51-.5h2.13l.5.5v3.34l-.5.5h-2.13l-.51-.5Zm.64,3.36.31-.16h1.24l.32.16h0l-.27-.46v-2.44l.27-.46h0l-.32.16H289.1l-.31-.16h0l.27.46v2.44l-.27.46Z" fill="#fff" /><path d="M293.26,287.78l.5-.5h2.13l.5.5v3.34l-.5.5h-2.13l-.5-.5Zm.63,3.36.31-.16h1.24l.32.16h0l-.27-.46v-2.44l.27-.46h0l-.32.16H294.2l-.31-.16h0l.26.46v2.44l-.26.46Z" fill="#fff" />
     </g>
   </svg>
