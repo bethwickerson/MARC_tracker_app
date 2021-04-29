@@ -117,14 +117,7 @@ function App() {
           <h4>copy/paste the following html code into your web page:</h4>
           <hr />
           <code>
-            &lt;div style=&quot;position: relative; overflow:hidden; width: 100%; height:100%; padding-top: calc(100% + 60px);&quot;&gt; &lt;iframe
-            src=&quot;http://marc-kc.github.io/MARC_tracker_app/&quot;
-            style=&quot;position:absolute; transform:translate(0,-60px); overflow: hidden; top: 0; left: 0; bottom: 0; right: 0;&quot;
-            scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot; title=&quot;Two Million Arms KC&quot;&gt;
-
-            &lt;/iframe&gt;
-            &lt;div id=&quot;logoTMA_container&quot;
-            style=&quot;position: relative; left:50%; transform:translate(-50%,0); overflow:hidden; max-width:500px; max-height:600px; padding-top: calc(100% + 60px);&quot;&gt;
+            &lt;div style=&quot;position: relative; left:50%; transform:translate(-50%,0); overflow:hidden; max-width:500px; max-height:600px; padding-top: calc(100% + 60px);&quot;&gt;
             &lt;iframe src=&quot;http://marc-kc.github.io/MARC_tracker_app/&quot;
             style=&quot;position:absolute; top:0; left:50%; transform:translate(-50%,-60px); overflow: hidden; max-width:500px !important; max-height:600px !important&quot;
             scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot; title=&quot;Two Million Arms KC&quot;&gt;&lt;/iframe&gt;
