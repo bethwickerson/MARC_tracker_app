@@ -117,10 +117,24 @@ function App() {
           <h4>copy/paste the following html code into your web page:</h4>
           <hr />
           <code>
-            &lt;div style=&quot;position: relative; overflow:hidden; width: 100%; height:100%; padding-top: calc(100% + 60px);&quot;&gt;
+            &lt;div style=&quot;position: relative; overflow:hidden; width: 100%; height:100%; padding-top: calc(100% + 60px);&quot;&gt; &lt;iframe
+            src=&quot;http://marc-kc.github.io/MARC_tracker_app/&quot;
+            style=&quot;position:absolute; transform:translate(0,-60px); overflow: hidden; top: 0; left: 0; bottom: 0; right: 0;&quot;
+            scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot; title=&quot;Two Million Arms KC&quot;&gt;
+
+            &lt;/iframe&gt;
+            &lt;div id=&quot;logoTMA_container&quot;
+            style=&quot;position: relative; left:50%; transform:translate(-50%,0); overflow:hidden; max-width:500px; max-height:600px; padding-top: calc(100% + 60px);&quot;&gt;
             &lt;iframe src=&quot;http://marc-kc.github.io/MARC_tracker_app/&quot;
-            style=&quot;position:absolute; transform:translate(0,-60px); overflow: hidden; top: 0; left: 0; bottom: 0; right: 0;&quot; scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot;
-            title=&quot;Two Million Arms KC&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+            style=&quot;position:absolute; top:0; left:50%; transform:translate(-50%,-60px); overflow: hidden; max-width:500px !important; max-height:600px !important&quot;
+            scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot; title=&quot;Two Million Arms KC&quot;&gt;&lt;/iframe&gt;
+
+            &lt;a style=&quot;display:block; position:absolute; top: 0; width:100%; text-align:center; padding-top: 100%; font-family: 'Poppins', Arial, Helvetica, sans-serif;text-decoration:none; color: #333; font-size: 13px;&quot;
+            href=&quot;https://marc-kc.github.io/MARC_tracker_app/&quot;&gt;Get this tracker for your site
+            &lt;img src=&quot;https://marc-kc.github.io/MARC_tracker_app/static/media/expand_more.1afc4c76.svg&quot; width=&quot;14&quot;
+            style=&quot;display:inline-block; transform: translate(0, 3px) rotate(-90deg)&quot; title=&quot;link&quot; /&gt;
+            &lt;/a&gt;
+            &lt;/div&gt;
           </code>
           <hr />
         </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
 
 .wrapper {
   position: relative;
@@ -51,8 +51,8 @@
   top: 10vh;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 40vw;
-  height: 60vh;
+  width: 80vw;
+  height: 70vh;
   padding: 1rem;
   overflow: auto;
 }
@@ -84,9 +84,8 @@ circle.track-percentage {
 }
 
 text.text-count {
-  font-family: "Heebo", "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  letter-spacing: -0.03rem;
 }
 text.text-date {
   font-family: Arial, Helvetica, sans-serif;
@@ -120,7 +119,7 @@ button {
   background: #eaeaea;
   color: #333333;
   font-weight: 900;
-  font-family: "Heebo", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1;
   cursor: pointer;
@@ -167,6 +166,7 @@ button:hover {
   flex: 0;
   text-align: left;
   padding: 9vh 7vw;
+  line-height: 1.2;
 }
 
 .download-option button:before {
@@ -193,7 +193,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Heebo", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #fff;
   background-color: rgba(0, 102, 153, 0.5);
   transform-origin: 0 center;

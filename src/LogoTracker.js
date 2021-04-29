@@ -11,7 +11,7 @@ const LogoTracker = (props) => (
           stroke-width="130"
           stroke-dasharray={`${props.percentage} 408.45`} />
 
-        <circle r="105" cx="147" cy="130" fill="white" />
+        <circle r="105" cx="147" cy="129" fill="white" />
       </g>
       <g>
         <path d="M116.39,76h-6.57V70.78h19.59V76h-6.58V93.47h-6.44Z" fill="#0a4f97" />
@@ -19,10 +19,10 @@ const LogoTracker = (props) => (
       </g>
       <g transform={`rotate(${props.degree}, 147, 129)`}>
         <rect x="15.5" y="-1" fill="#FFFFFF" fill-opacity="0" width="260" height="259.6" />
-        <polygon fill="#ffffff" points="147.5,25 162,12, 147.5,-1" />
+        <polygon fill="#ffffff" points="146.5,25 162,12, 146.5,-1" />
       </g>
     </g>
-    <text transform="translate(0 318)" className="text-count" font-size="30" fill="#e24433" font-family="'Heebo', Arial, Helvetica, sans-serif" x="48%" text-anchor="middle">{props.count}</text>
+    <text transform="translate(5 318)" className="text-count" font-size="30" fill="#e24433" font-family="'Poppins', Arial, Helvetica, sans-serif" x="48%" text-anchor="middle">{props.count}</text>
     <text transform="translate(8 298)" className="text-date" font-size="7" fill="#333333" font-family="Arial, Helvetica, sans-serif" x="0">
       <tspan x="5">Vaccinations</tspan>
       <tspan x="5" y="8">completed</tspan>
