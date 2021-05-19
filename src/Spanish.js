@@ -122,7 +122,7 @@ export default function Spanish() {
             scrolling=&quot;no&quot; height=&quot;100%&quot; width=&quot;100%&quot; frameborder=&quot;0&quot; title=&quot;Dos Milliones De Brazos KC&quot;&gt;&lt;/iframe&gt;
 
             &lt;a style=&quot;display:block; position:absolute; top: 0; width:100%; text-align:center; padding-top: 100%; font-family: 'Poppins', Arial, Helvetica, sans-serif;text-decoration:none; color: #333; font-size: 13px;&quot;
-            href=&quot;https://marc-kc.github.io/MARC_tracker_app/&quot;&gt;Obtenga este rastreador para su sitio
+            href=&quot;https://marc-kc.github.io/MARC_tracker_app/#/spanish&quot;&gt;Obtenga este rastreador para su sitio
             &lt;img src=&quot;https://marc-kc.github.io/MARC_tracker_app/static/media/expand_more.1afc4c76.svg&quot; width=&quot;14&quot;
             style=&quot;display:inline-block; transform: translate(0, 3px) rotate(-90deg)&quot; title=&quot;link&quot; /&gt;
             &lt;/a&gt;
